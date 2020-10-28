@@ -13,7 +13,7 @@ Data collected using [PokéApi](https://pokeapi.co/), a simple and public API.
 ## TODO
 
 - [ ] Dark theme.
-- [ ] Mouse hover animation.
+- [x] Mouse hover animation.
 - [ ] More pokémon information (type, generation, moveset, stats) when click on card.
 - [ ] Better search system to find for exemple: _dark and dragon gen IV_
 - [x] Better scrollbar?

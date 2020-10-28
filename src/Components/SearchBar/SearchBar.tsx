@@ -12,6 +12,7 @@ const SearchBar: React.FC<SearchProps> = (props) => {
         type="text"
         name="name"
         placeholder="Filtre um pokémon em espécifico"
+        autoComplete="off"
         onChange={props.onChange}
       />
     </form>
