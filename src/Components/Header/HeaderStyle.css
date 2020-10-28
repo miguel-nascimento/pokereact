@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  /* background: rgb(231, 73, 73);  */
+  /* background: linear-gradient(
+    180deg,
+    rgba(231, 73, 73, 1) 0%,
+    rgba(230, 108, 92, 1) 100%
+  ); */
+  background-color: #ed5c5c;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.logo {
+  height: 7.5vh;
+}
