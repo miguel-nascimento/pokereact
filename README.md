@@ -1,7 +1,8 @@
 # PokéReact
 
+**A Pokédex application build in React ⚛️**
+
 ![SitePreview](https://i.imgur.com/jX5SUuE.png)
-A Pokédex application build in React ⚛️.
 
 All 893 pokémons, with a dynamic search.
 
