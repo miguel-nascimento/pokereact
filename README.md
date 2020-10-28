@@ -1,17 +1,17 @@
-# PokeReact
+# PokéReact
 
 ![SitePreview](https://i.imgur.com/jX5SUuE.png)
-A Pokedex application build in React ⚛️.
+A Pokédex application build in React ⚛️.
 
 All 893 pokémons, with a dynamic search.
 
-Avaliably at
+Available [here](https://pokereact-eight.vercel.app/)
 
 ## TODO
 
-[ ] Dark theme.
-[ ] Mouse hover animation.
-[ ] More pokemon information when click on card.
+- [ ] Dark theme.
+- [ ] Mouse hover animation.
+- [ ] More pokémon information when click on card.
 
 Project initialized with [create-react-app](https://github.com/facebook/create-react-app)
 
