@@ -32,8 +32,9 @@ function App() {
   }, []);
 
   const handleSearch = (e) => {
-    setFilter(e.target.value);
+    setFilter(e.target.value.toLowerCase());
   };
+
   return (
     <div className="App">
       <Header />
