@@ -11,6 +11,19 @@ body {
   height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ed5c5c;
+  height: 10.05vh;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f2eae9;
+}
+
 :root {
   font-size: 62.5%;
   /* font-size: 1.4rem; */
