@@ -14,7 +14,8 @@ Data collected using [PokéApi](https://pokeapi.co/), a simple and public API.
 
 - [ ] Dark theme.
 - [ ] Mouse hover animation.
-- [ ] More pokémon information when click on card.
+- [ ] More pokémon information (type, generation, moveset, stats) when click on card.
+- [ ] Better search system to find for exemple: _dark and dragon gen IV_
 - [x] Better scrollbar?
 
 Project initialized with [create-react-app](https://github.com/facebook/create-react-app)
