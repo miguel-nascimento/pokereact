@@ -8,6 +8,8 @@ All 893 pokémons, with a dynamic search.
 
 Available [here](https://pokereact-eight.vercel.app/)
 
+Data collected using [PokéApi](https://pokeapi.co/), a simple and public API.
+
 ## TODO
 
 - [ ] Dark theme.
