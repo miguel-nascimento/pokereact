@@ -16,6 +16,7 @@ Data collected using [PokéApi](https://pokeapi.co/), a simple and public API.
 - [x] Mouse hover animation.
 - [ ] More pokémon information (type, generation, moveset, stats) when click on card.
 - [ ] Better search system to find for exemple: _dark and dragon gen IV_
+- [ ] Lazy load and adjust the search system for this
 - [x] Better scrollbar?
 
 Project initialized with [create-react-app](https://github.com/facebook/create-react-app)
