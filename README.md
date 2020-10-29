@@ -2,7 +2,7 @@
 
 **A Pokédex application build in React ⚛️**
 
-![SitePreview](https://i.imgur.com/jX5SUuE.png)
+![SitePreview](https://i.imgur.com/gfd9cEw.gif)
 
 All 893 pokémons, with a dynamic search.
 
