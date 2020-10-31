@@ -1,9 +1,9 @@
 //@ts-nocheck
 import React, { useEffect } from "react";
-import Header from "./Components/Header/Header";
-import Card from "./Components/Card/Card";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import "./GlobalStyles.css";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
+import SearchBar from "./components/SearchBar/SearchBar";
+import { GlobalStyles } from "./GlobalStyles";
 import { useState } from "react";
 import axios from "axios";
 
@@ -37,6 +37,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyles />
       <Header />
       <SearchBar onChange={handleSearch} />
       <div className="grid-container">
