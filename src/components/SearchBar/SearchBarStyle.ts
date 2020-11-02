@@ -19,6 +19,7 @@ export const StyledForm = styled.form`
     margin-bottom: 1rem;
     border-radius: 0.66rem;
     padding: 0.66rem 1rem;
+    color: ${(props) => props.theme?.color.text};
   }
 
   input:focus {
