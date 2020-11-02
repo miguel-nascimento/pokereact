@@ -42,13 +42,13 @@ function App() {
 
   const changeTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
-    console.log(theme);
   };
+  console.log(changeTheme);
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header onChange={changeTheme} />
+        <Header changeTheme={changeTheme} />
         <SearchBar onChange={handleSearch} />
         <div className="grid-container">
           {pokemon.map(
