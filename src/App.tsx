@@ -53,7 +53,7 @@ function App() {
         <div className="grid-container">
           {pokemon.map(
             (pokemon) =>
-              pokemon.name.includes(filter) && (
+              pokemon.name.startsWith(filter) && (
                 <Card
                   key={pokemon.id}
                   image={pokemon.url}
