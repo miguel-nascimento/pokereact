@@ -3,9 +3,12 @@ import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import SearchBar from "./components/SearchBar/SearchBar";
-import { GlobalStyles } from "./GlobalStyles";
+import GlobalStyles from "./styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import axios from "axios";
+import light from "./styles/themes/light";
+import dark from "./styles/themes/dark";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -35,20 +38,32 @@ function App() {
     setFilter(e.target.value.toLowerCase());
   };
 
+  const [theme, setTheme] = useState(light);
+
+  const changeTheme = () => {
+    setTheme(theme.title === "light" ? dark : light);
+    console.log(theme);
+  };
   return (
     <div className="App">
-      <GlobalStyles />
-      <Header />
-      <SearchBar onChange={handleSearch} />
-      <div className="grid-container">
-        {pokemon.map(
-          (pokemon) =>
-            pokemon.name.includes(filter) && (
-              <Card key={pokemon.id} image={pokemon.url} name={pokemon.name} />
-            )
-        )}
-      </div>
-      <div className="footer"></div>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Header onChange={changeTheme} />
+        <SearchBar onChange={handleSearch} />
+        <div className="grid-container">
+          {pokemon.map(
+            (pokemon) =>
+              pokemon.name.includes(filter) && (
+                <Card
+                  key={pokemon.id}
+                  image={pokemon.url}
+                  name={pokemon.name}
+                />
+              )
+          )}
+        </div>
+        <div className="footer"></div>
+      </ThemeProvider>
     </div>
   );
 }

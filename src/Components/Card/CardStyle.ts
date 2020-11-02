@@ -4,7 +4,6 @@ export const StyledCard = styled.div`
   width: 50%;
   border-radius: 0.8rem;
   padding: 0.2rem 1.6rem;
-  /* margin: 5rem 7rem; */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   align-self: center;
   justify-self: center;
@@ -16,8 +15,7 @@ export const StyledCard = styled.div`
 
   .image-container {
     border-radius: 0.8rem 0.8rem 0 0;
-    /* background-color: #d6d6d6; */
-    background-color: #f1f1f1;
+    background-color: ${(props) => props.theme?.color.cardBack};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +29,7 @@ export const StyledCard = styled.div`
 
   .details {
     border-radius: 0 0 0.8rem 0.8rem;
-    background-color: #ffffff;
+    background-color: ${(props) => props.theme?.color.cardBelow};
     text-align: center;
     text-transform: capitalize;
   }

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
+export default createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
@@ -10,8 +10,9 @@ export const GlobalStyles = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff7f5;
+    background-color: ${(props) => props.theme?.color.background};
     height: 100vh;
+    color: ${(props) => props.theme?.color.text};
   }
 
   body::-webkit-scrollbar {
@@ -19,12 +20,12 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-thumb {
-    background: #ed5c5c;
+    background: ${(props) => props.theme?.color.primary};
     height: 10.05vh;
   }
 
   body::-webkit-scrollbar-track {
-    background: #f2eae9;
+    background: ${(props) => props.theme?.color.track};
   }
 
   :root {
