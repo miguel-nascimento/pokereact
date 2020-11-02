@@ -21,12 +21,12 @@ const Header: React.FC<HeaderProps> = (props) => {
       <Switcher
         onChange={props.changeTheme}
         className="switcher"
-        checked={theme.title === "light" ? true : false}
+        checked={theme.title === "dark" ? true : false}
         height={10}
         width={20}
         handleDiameter={15}
-        onColor={shade(0.15, theme.color.primary)}
-        offColor={lighten(0.15, theme.color.off)}
+        onColor={lighten(0.15, theme.color.primary)}
+        offColor={shade(0.15, theme.color.primary)}
         checkedIcon={false}
         uncheckedIcon={false}
       />

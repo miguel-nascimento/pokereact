@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledForm } from "./SearchBarStyle";
+
 interface SearchProps {
   onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
 }

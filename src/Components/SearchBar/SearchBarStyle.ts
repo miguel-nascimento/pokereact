@@ -8,9 +8,10 @@ export const StyledForm = styled.form`
   font-size: 1.8rem;
 
   input[type="text"] {
-    color: ${(props) => props.theme?.color.text};
+    background-color: ${(props) => props.theme?.color.input};
     font-size: 1.6rem;
     height: 3.5vh;
+    width: 50vw;
     width: clamp(33vw, 45vw, 50vw);
     border: none;
     outline: none;
@@ -18,7 +19,6 @@ export const StyledForm = styled.form`
     margin-bottom: 1rem;
     border-radius: 0.66rem;
     padding: 0.66rem 1rem;
-    background-color: ${(props) => props.theme?.color.input};
   }
 
   input:focus {

@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
-import Switch from "react-switch";
-import { ThemeContext } from "styled-components";
 import { StyledHeader } from "./HeaderStyle";
+import Switcher from "react-switch";
+import { ThemeContext } from "styled-components";
 import { lighten, shade } from "polished";
 
-interface Props {
-  onChange: () => void;
+interface HeaderProps {
+  changeTheme(): void;
 }
 
-const Header: React.FC<Props> = (props) => {
+const Header: React.FC<HeaderProps> = (props) => {
   const theme = useContext(ThemeContext);
+
   return (
     <StyledHeader>
       <img
@@ -17,17 +18,17 @@ const Header: React.FC<Props> = (props) => {
         src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
         alt="PokeApi Logo"
       />
-      <Switch
-        className="switch"
-        height={12.5}
-        width={25}
+      <Switcher
+        onChange={props.changeTheme}
+        className="switcher"
+        checked={theme.title === "dark" ? true : false}
+        height={10}
+        width={20}
         handleDiameter={15}
-        checked={theme.title === "light" ? true : false}
-        onChange={props.onChange}
+        onColor={lighten(0.15, theme.color.primary)}
+        offColor={shade(0.15, theme.color.primary)}
         checkedIcon={false}
         uncheckedIcon={false}
-        onColor={shade(0.15, theme.color.primary)}
-        offColor={lighten(0.15, theme.color.off)}
       />
     </StyledHeader>
   );

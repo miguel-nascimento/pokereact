@@ -4,6 +4,7 @@ export const StyledCard = styled.div`
   width: 50%;
   border-radius: 0.8rem;
   padding: 0.2rem 1.6rem;
+  /* margin: 5rem 7rem; */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   align-self: center;
   justify-self: center;
