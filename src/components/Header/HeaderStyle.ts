@@ -18,10 +18,14 @@ export const StyledHeader = styled.header`
     justify-self: flex-end;
   }
 
-  padding: 0 10rem;
+  padding: 0 2rem;
+
+  @media (min-width: 320px) {
+    padding: 0 3rem;
+  }
 
   @media (min-width: 375px) {
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 
   @media (min-width: 768px) {

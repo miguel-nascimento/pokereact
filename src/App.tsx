@@ -1,4 +1,3 @@
-//@ts-nocheck
 import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
@@ -6,6 +5,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
+import useLocalState from "./hooks/useLocalState";
 import axios from "axios";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
@@ -20,8 +20,8 @@ function App() {
       .then(function (response) {
         const { data } = response;
         const { results } = data;
-        const newPokemonData = [];
-        results.forEach((pokemon, index) => {
+        const newPokemonData: any = [];
+        results.forEach((pokemon: any, index: number) => {
           newPokemonData[index + 1] = {
             id: index,
             name: pokemon.name,
@@ -34,11 +34,11 @@ function App() {
       });
   }, []);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: any) => {
     setFilter(e.target.value.toLowerCase());
   };
 
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = useLocalState("theme", light);
 
   const changeTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
@@ -52,7 +52,7 @@ function App() {
         <SearchBar onChange={handleSearch} />
         <div className="grid-container">
           {pokemon.map(
-            (pokemon) =>
+            (pokemon: { name: string; id: number; url: string }) =>
               pokemon.name.startsWith(filter) && (
                 <Card
                   key={pokemon.id}
