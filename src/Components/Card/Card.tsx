@@ -1,6 +1,5 @@
 import React from "react";
-import "./CardStyle.css";
-import { useTheme } from "../../Themes/ThemeContext";
+import { StyledCard } from "./CardStyle";
 
 interface CardProps {
   name: string;
@@ -8,16 +7,15 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-  const { theme } = useTheme();
   return (
-    <div id="card">
+    <StyledCard>
       <div className="image-container">
         <img src={props.image} alt="" />
       </div>
-      <div className={`details ${theme}`}>
+      <div className="details">
         <h1>{props.name}</h1>
       </div>
-    </div>
+    </StyledCard>
   );
 };
 
