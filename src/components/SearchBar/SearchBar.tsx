@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchBarStyle.css";
+import { StyledForm } from "./SearchBarStyle";
 
 interface SearchProps {
   onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
@@ -7,7 +7,7 @@ interface SearchProps {
 
 const SearchBar: React.FC<SearchProps> = (props) => {
   return (
-    <form action="">
+    <StyledForm>
       <input
         type="text"
         name="name"
@@ -15,7 +15,7 @@ const SearchBar: React.FC<SearchProps> = (props) => {
         autoComplete="off"
         onChange={props.onChange}
       />
-    </form>
+    </StyledForm>
   );
 };
 

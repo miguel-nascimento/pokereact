@@ -1,14 +1,20 @@
 //@ts-nocheck
 import React, { useEffect } from "react";
-import Header from "./Components/Header/Header";
-import Card from "./Components/Card/Card";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import "./GlobalStyles.css";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
+import SearchBar from "./components/SearchBar/SearchBar";
+import GlobalStyles from "./styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import { ThemeProvider, useTheme } from "./Themes/ThemeContext"
 import sun from "./Themes/sun.png"
 import moon from "./Themes/moon.png"
+=======
+import light from "./styles/themes/light";
+import dark from "./styles/themes/dark";
+>>>>>>> dev
 
 export default function App() {
   return (
@@ -44,6 +50,7 @@ const Page = () => {
     setFilter(e.target.value.toLowerCase());
   };
 
+<<<<<<< HEAD
   const { theme, setTheme } = useTheme();
 
   return (
@@ -62,6 +69,34 @@ const Page = () => {
         )}
       </div>
       <div className="footer"></div>
+=======
+  const [theme, setTheme] = useState(light);
+
+  const changeTheme = () => {
+    setTheme(theme.title === "light" ? dark : light);
+  };
+  console.log(changeTheme);
+  return (
+    <div className="App">
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Header changeTheme={changeTheme} />
+        <SearchBar onChange={handleSearch} />
+        <div className="grid-container">
+          {pokemon.map(
+            (pokemon) =>
+              pokemon.name.startsWith(filter) && (
+                <Card
+                  key={pokemon.id}
+                  image={pokemon.url}
+                  name={pokemon.name}
+                />
+              )
+          )}
+        </div>
+        <div className="footer"></div>
+      </ThemeProvider>
+>>>>>>> dev
     </div>
   );
 }
